@@ -218,7 +218,9 @@ router.get('/work', function (req, res) {
               name: 'Resume',
               url: 'http://resume.com.ua/',
               about:
-                'Airbnb competitor...bdnlb oboeboaep  .',
+                'Airbnb competitor...Airbnb competitor  .',
+
+              stackAmount: 4,
               stacks: [
                 {
                   name: 'React.js',
@@ -230,9 +232,10 @@ router.get('/work', function (req, res) {
                   name: 'Nodejs',
                 },
               ],
+              awardsAmount: 4,
               awards: [
                 {
-                  name: 'Background verification',
+                  name: 'Background verification.......',
                 },
                 {
                   name: 'Preparing SEO',

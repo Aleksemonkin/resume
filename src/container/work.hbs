@@ -25,12 +25,13 @@
                     </div>
 
                     <br>
-
+                    {{#if company.url}}
                     <div>{{>link text=company.name href=company.url blank=true noline=true}}</div>
-
+                    {{else}}
+                    <b>{{company.name}}</b>
+                    {{/if}}
                     <br>
                     <br>
-
                     <div>
                         <strong>Projects ({{projectAmount}})</strong>
                     </div>
@@ -38,63 +39,47 @@
                     <br>
 
                     <ul>
-                        {{#each project}}
-                        <li>
-                            <div>{{>link text=name href=url blank=true noline=true}}</div>
-                        </li>
-                    </ul>
-                    {{/each}}
+                        {{#each projects}}
 
-                    </li>
-
-                    {{/each}}
-
-                    <p>
-                        <em>
-                            <div><a href="#"> Resume </a></div>
-                            <br>
-                            Airbnb competitor...bdnlb oboeboaep
-
-                        </em>
-                    <div>
+                        <div>{{>link text=name href=url blank=true noline=true}}</div>
                         <br>
-                        {{#each work.projects}}
 
-                        <ul>
-                            <div><em>{{stacks.name}}</em></div>
-                            <br>
-                            {{#each stacks}}
-                            <li>
-                                {{name}}
-                            </li>
-                            {{/each}}
-                        </ul>
+                        <div>
+                            <p>{{about}}</p>
+                        </div>
+                        <br>
+                        <div>
+                            <em> Project stacks({{stackAmount}})</em>
+                        </div>
+
+                        <br>
                         <div>
                             <ul>
-                                {{each.awards}}
-                                {{name}}
-
-                                <li>
-
-                                </li>
+                                {{#each stacks}}
+                                <li>{{name}}</li>
+                                {{/each}}
                             </ul>
                         </div>
-
-                        {{!-- {{#each stacks}}
-
+                        <br>
                         <div>
-                            <strong>Projects Stacks.name({{projectAmount}})</strong>
+                            <em>Project awards({{awardsAmount}})</em>
                         </div>
-                        {{/each}} --}}
+                        <br>
+                        <div>
+                            <ul>
+                                {{#each awards}}
+                                <li>{{name}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
                         {{/each}}
+                    </ul>
+                    </li>
+                    <br>
+                    {{/each}}
                 </ul>
             </div>
         </section>
-
-        {{/with}}
+    </main>
+    {{/with}}
 </div>
-
-{{!--
-Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
-Адже наш layout/default.hbs має вже структуру HTML
---}}

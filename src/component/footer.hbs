@@ -16,6 +16,16 @@
         <div>
             <em>Адреса:{{../header.address}}</em>
         </div>
+        {{#unless noline}}
+
+        {{#if line}}
+        ---
+        {{else}}
+
+        {{/if}}
+
+        {{/unless}}
     </address>
+
 </footer>
 {{/with}}
