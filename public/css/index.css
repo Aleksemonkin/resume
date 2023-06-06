@@ -1,8 +1,13 @@
 html {
   max-width: 720px;
 }
+<<<<<<< HEAD
+/* 
+body {
+=======
 
 /* body {
+>>>>>>> d70bc2931e82207b844454b61ede2a445333d197
   margin: 32px;
   background: #fff;
 }
