@@ -25,42 +25,7 @@
     {{/with}}
     {{/with}}
     <hr class="mt-5">
-    {{#with goodsBlock}}
-    <div class="row">
-        {{#each []}}
-        <div class="card d-flex flex-row p-3 g-3">
-            <div class="col-2">
-                <img src="{{image}}" alt="Image cap">
-            </div>
-            <div class="col-3 ms-4">
-                <h3>{{name}}</h3>
-                <p>{{description}}</p>
-            </div>
-
-            <div class="col-2 m-1">
-                {{#with price}}
-                <p>{{title}}</p>
-                <h5>{{value}}</h5>
-                {{/with}}
-            </div>
-            <div class="col-1 m-1">
-                <p>{{amount}}</p>
-            </div>
-            <div class="col-2 m-1">
-                {{#with buttons}}
-                {{#each []}}
-                <div class="p-2">
-                    <button {{#if isDanger}} class="btn btn-outline-danger" {{else}} class="btn btn-primary"
-                        {{/if}}>{{text}}</button>
-                </div>
-                {{/each}}
-                {{/with}}
-            </div>
-        </div>
-        {{/each}}
-    </div>
-    {{/with}}
-
+    {{>cartGoodItem}}
     <hr class="mt-5">
     {{#with total}}
 
