@@ -123,10 +123,14 @@
             </div>
         </div>
         {{/with}}
+        <div class="col-8">
+            <div class="row">
+                {{#each goodsList}}
+                {{>catalogItem}}
+                {{/each}}
 
-        {{#each goodsList}}
-        {{>catalogItem}}
-        {{/each}}
+            </div>
+        </div>
     </div>
     {{#with service}}
     <div class="card text-center bg-success">
