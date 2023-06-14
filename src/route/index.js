@@ -1996,6 +1996,84 @@ router.get('/shoporder', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+
+router.get('/index8', function (req, res) {
+  res.render('index8', {
+    layout: 'index8',
+    header,
+    project: 'Resume project',
+    list_name: 'Список сторінок',
+    description:
+      'Тут вам потрібно написати інформацію про ваш проєкт. Поки що можна написати будь-який текст.',
+    buttons: [
+      {
+        text: 'Summary',
+        link: '/summary',
+      },
+      {
+        text: 'Skills',
+        link: '/skills',
+      },
+      {
+        text: 'Education',
+        link: '/education',
+      },
+      {
+        text: 'Bio',
+        link: '/bio',
+      },
+      {
+        text: 'Car',
+        link: '/car',
+      },
+      {
+        text: 'Facebook',
+        link: '/facebook',
+      },
+      {
+        text: 'JS',
+        link: '/js',
+      },
+      {
+        text: 'Person',
+        link: '/person',
+      },
+      {
+        text: 'Program',
+        link: 'program',
+      },
+      {
+        text: 'Shopcart',
+        link: '/shopcart',
+      },
+      {
+        text: 'Shophome',
+        link: '/shophome',
+      },
+      {
+        text: 'Shoporder',
+        link: '/shoporder',
+      },
+      {
+        text: 'Task21',
+        link: '/task21',
+      },
+
+      {
+        text: 'Task31',
+        link: '/task31',
+      },
+      {
+        text: 'Web',
+        link: '/web',
+      },
+      {
+        text: 'Work',
+        link: '/work',
+      },
+    ],
+  })
+
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/shopreview', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -2905,6 +2983,7 @@ router.get('/shopcatalog', function (req, res) {
     ],
   })
   //                  ↑↑ сюди вводимо JSON дані
+
 })
 // Підключаємо роутер до бек-енду
 module.exports = router

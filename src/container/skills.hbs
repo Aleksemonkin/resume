@@ -3,52 +3,52 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
-    {{#with main}}
-    <main>
-        <section>
-            {{>title big=true data="All skills"}}
-            <ul>
-                {{#each skills }}
-                <li>
-                    {{name}}
 
-                    {{#if point includeZero=true}} ({{point}}){{/if}}
+{{#with main}}
+<main class="m-5">
+    <section>
+        {{>title big=true data="All skills"}}
+        <ul>
+            {{#each skills }}
+            <li>
+                {{name}}
 
-                    {{#if isTop}} (top!) {{/if}}
+                {{#if point includeZero=true}} ({{point}}){{/if}}
 
-                    {{#unless point includeZero=true}}(не вивчаємо){{/unless}}
+                {{#if isTop}} (top!) {{/if}}
 
-                    {{#unless point}}
-                    {{#if point includeZero=true}}(зараз вивчаємо){{/if}}
-                    {{/unless}}
+                {{#unless point includeZero=true}}(не вивчаємо){{/unless}}
 
-                </li>
-                {{/each}}
-            </ul>
-        </section>
-        <section>
+                {{#unless point}}
+                {{#if point includeZero=true}}(зараз вивчаємо){{/if}}
+                {{/unless}}
 
-            {{>title big=false data="My hobbies"}}
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <section>
 
-            <ol>
-                {{#each hobbies}}
-                <li>
-                    {{name}}
+        {{>title big=false data="My hobbies"}}
 
-                    {{#if isMain}}
-                    (Favourite)
+        <ol>
+            {{#each hobbies}}
+            <li>
+                {{name}}
 
-                    {{/if}}
+                {{#if isMain}}
+                (Favourite)
 
-                </li>
-                {{/each}}
-            </ol>
+                {{/if}}
 
-        </section>
-    </main>
-    {{/with}}
-</div>
+            </li>
+            {{/each}}
+        </ol>
+
+    </section>
+</main>
+{{/with}}
+
 
 {{!--
 Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
